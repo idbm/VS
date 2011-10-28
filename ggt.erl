@@ -1,15 +1,15 @@
 -module(ggt).
--export([start/8]).
--record(worker , {clientname, rechterNach, linkerNachbar, datei, arbeitsZeit, koordinatorname, koordinatornode, nameservicenode}).
+-export([start/7]).
+-record(worker , {clientname, rechterNach, linkerNachbar, datei, arbeitsZeit, koordinatorname, nameservicenode}).
 
-start(StarterName,Elem,Nummer,ArbeitsZeit,TermZeit, Koordinatorname, Nameservicenode, Koordinatornode) ->
+start(StarterName,Elem,Nummer,ArbeitsZeit,TermZeit, Koordinatorname, Nameservicenode) ->
     
   {ok, HostName} = inet:gethostname(),
 	
   Ggt_Name =erlang:list_to_atom(lists:concat([StarterName,Elem,Nummer])),
   Datei = lists:concat([Ggt_Name,"@",HostName,".log"]),
   
-  GgtPid = spawn(fun() -> loop(#worker{clientname=Ggt_Name, datei=Datei, arbeitsZeit=ArbeitsZeit, koordinatorname=Koordinatorname, koordinatornode=Koordinatornode, nameservicenode=Nameservicenode}) end),
+  GgtPid = spawn(fun() -> loop(#worker{clientname=Ggt_Name, datei=Datei, arbeitsZeit=ArbeitsZeit, koordinatorname=Koordinatorname, nameservicenode=Nameservicenode}) end),
 	Zeit = lists:concat([Ggt_Name,"@",HostName," Startzeit: ",werkzeug:timeMilliSecond()]),
 	Inhalt = lists:concat([Zeit," mit PID ", pid_to_list(GgtPid), "\n"]),
 	werkzeug:logging(Datei,Inhalt),
@@ -27,10 +27,8 @@ start(StarterName,Elem,Nummer,ArbeitsZeit,TermZeit, Koordinatorname, Nameservice
           in_use -> werkzeug:logging(Datei,"..schon gebunden.\n")
         end,
   werkzeug:logging(Datei,"Nameservice bind \n"),
-	net_adm:ping(Koordinatornode),
-	
-	Chef = Koordinatorname,    
-  Chef ! {hello,Ggt_Name},  
+   
+  Koordinatorname ! {hello,Ggt_Name},  
   werkzeug:logging(Datei,"Beim Koordinator angemeldet\n").
 	
   

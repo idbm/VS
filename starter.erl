@@ -1,6 +1,6 @@
 -module(starter).
 -export([start/1]).
--record(state1, {startername, koordinatorname, datei, nameservicenode, koordinatornode}).
+-record(state1, {startername, koordinatorname, datei, nameservicenode}).
 
 
 
@@ -14,10 +14,10 @@ start(Nummer) ->
   {ok, Teamnummer} = werkzeug:get_config_value(teamnummer, ConfigListe),
   {ok, Nameservicenode} = werkzeug:get_config_value(nameservicenode, ConfigListe),
   {ok, Koordinatorname} = werkzeug:get_config_value(koordinatorname, ConfigListe),
-  {ok, Koordinatornode} = werkzeug:get_config_value(koordinatornode, ConfigListe),
+  %%{ok, Koordinatornode} = werkzeug:get_config_value(koordinatornode, ConfigListe),
   
   StarterName = lists:concat([Praktikumsgruppe,Teamnummer,Nummer]),
-  StarterPid = spawn(fun() -> loop(#state1{startername=StarterName, koordinatorname=Koordinatorname, datei=Datei, nameservicenode=Nameservicenode, koordinatornode=Koordinatornode}, Nummer) end),
+  StarterPid = spawn(fun() -> loop(#state1{startername=StarterName, koordinatorname=Koordinatorname, datei=Datei, nameservicenode=Nameservicenode}, Nummer) end),
 	
   Zeit = lists:concat(["Starter@",HostName," Startzeit: ",werkzeug:timeMilliSecond()]),
 	Inhalt = lists:concat([Zeit," mit PID ", pid_to_list(StarterPid), "\n"]),
@@ -41,24 +41,27 @@ start(Nummer) ->
     StarterName = State#state1.startername,
     Nameservicenode = State#state1.nameservicenode,
     
-    Koordinatornode = State#state1.koordinatornode,
+    %%Koordinatornode = State#state1.koordinatornode,
     Koordinatorname = State#state1.koordinatorname,
         
 	  werkzeug:logging(Datei,"Nameservice bind \n"),
-	  net_adm:ping(Koordinatornode),
-    Chef = global:whereis_name(Koordinatorname),    
-    Chef ! {getsteeringval, self()},
-    werkzeug:logging(Datei, lists:concat([getsteeringval, "\n"])),
-    receive
-      {steeringval,ArbeitsZeit,TermZeit,GGTProzessnummer} ->
-          werkzeug:logging(Datei,lists:concat(["ArbeitsZeit: ",ArbeitsZeit, "; TermZeit: ", TermZeit, "; GGTProzessnummer", GGTProzessnummer, "\n" ])),
-          List = lists:seq(1, GGTProzessnummer),
-          lists:foreach(fun(Elem)->
-              spawn(fun() ->
-                    ggt:start(StarterName,Elem,Nummer,ArbeitsZeit,TermZeit, Chef, Nameservicenode, Koordinatornode)
-                  end)
-          end,List)
-          
-          
-         end.
+	  %%net_adm:ping(Koordinatornode),
+    %%Chef = global:whereis_name(Koordinatorname),    
+    Nameservice = global:whereis_name(nameservice),
+    Nameservice ! {self(),{lookup,Koordinatorname}},
+            receive
+              {Name,Node} -> {Name,Node} ! {getsteeringval, self()},
+                              werkzeug:logging(Datei, lists:concat([getsteeringval, "\n"])),
+                              receive
+                                {steeringval,ArbeitsZeit,TermZeit,GGTProzessnummer} ->
+                                    werkzeug:logging(Datei,lists:concat(["ArbeitsZeit: ",ArbeitsZeit, "; TermZeit: ", TermZeit, "; GGTProzessnummer", GGTProzessnummer, "\n" ])),
+                                    List = lists:seq(1, GGTProzessnummer),
+                                    lists:foreach(fun(Elem)->
+                                        spawn(fun() ->
+                                              ggt:start(StarterName,Elem,Nummer,ArbeitsZeit,TermZeit, {Name,Node}, Nameservicenode)
+                                            end)
+                                    end,List)
+                                  end;
+               not_found -> werkzeug:logging(Datei,lists:concat([Koordinatorname, " not founded"]))
+            end.
     %%werkzeug:logging(State#state.datei,"ArbeitsZeit \n").

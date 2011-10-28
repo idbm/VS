@@ -23,7 +23,12 @@ start() ->
 	werkzeug:logging(Datei,Inhalt),
 	werkzeug:logging(Datei,"koordinator.cfg gelesen \n"),
 	
-	global:register_name(Koordinatorname,KoordinatorPid),
+	case {is_pid(whereis(Koordinatorname))} of
+	  {true} -> unregister(Koordinatorname);
+	  {false} -> ok
+	end,
+	erlang:register(Koordinatorname,KoordinatorPid),
+	
 	net_adm:ping(Nameservicenode),
 	Nameservice = global:whereis_name(nameservice),
 	Nameservice ! {self(),{rebind, Koordinatorname ,node()}},
@@ -121,7 +126,7 @@ start() ->
           io:format("List~p~n",[List]),
           NewList = shuffle(List),
           io:format("NewList~p~n",[NewList]),
-          [Head, Next, Next1 | T] = NewList,
+          [Head, Next| T] = NewList,
           Last = lists:last(T),
           Nameservice ! {self(),{lookup,Head}},
             receive
@@ -129,7 +134,8 @@ start() ->
               not_found -> werkzeug:logging(Datei,lists:concat([Head, " not founded"]))
             end,
           init(Opts)
-        end
+        end;
+        {bereit} -> werkzeug:logging(Datei,"Ich bin jetzt bereit \n")
                                     
           
             
