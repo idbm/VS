@@ -1,106 +1,13 @@
-116212@IDBM-PC Startzeit: 31.10 19:05:09,778| mit PID <0.1594.0>
-lokal registriert mit name: 116212 und Pid: <0.1594.0>
+116212@IDBM-PC Startzeit: 31.10 23:25:39,924| mit PID <0.4394.0>
+lokal registriert mit name: 116212 und Pid: <0.4394.0>
 ..bind.done.
 Nameservice bind 
 Beim Koordinator angemeldet
 Linker Nachbar: 116222 (116222) gebunden 
 Rechter Nachbar: 116121 (116121) gebunden 
  initiales Mi 3899467
- Y 67
+ Y 201
 116222 NameA drei@IDBM-PC NodeA
 116121 NameB drei@IDBM-PC NodeB
  Y 67
-116212@IDBM-PC Startzeit: 31.10 20:34:59,184| mit PID <0.1960.0>
-lokal registriert mit name: 116212 und Pid: <0.1960.0>
-..bind.done.
-Nameservice bind 
-Beim Koordinator angemeldet
-Linker Nachbar: 116222 (116222) gebunden 
-Rechter Nachbar: 116131 (116131) gebunden 
- initiales Mi 1815294
- Y 34
-116222 NameA drei@IDBM-PC NodeA
-116131 NameB drei@IDBM-PC NodeB
- Y 34
-116212@IDBM-PC Startzeit: 31.10 20:42:30,884| mit PID <0.2306.0>
-lokal registriert mit name: 116212 und Pid: <0.2306.0>
-..bind.done.
-Nameservice bind 
-Beim Koordinator angemeldet
-Linker Nachbar: 116121 (116121) gebunden 
-Rechter Nachbar: 116232 (116232) gebunden 
- initiales Mi 1575
- Y 1096332237
-116121 NameA drei@IDBM-PC NodeA
-116232 NameB drei@IDBM-PC NodeB
- Y 63
- Y 21
-116121 NameA drei@IDBM-PC NodeA
-116232 NameB drei@IDBM-PC NodeB
- Y 21
-116212@IDBM-PC Startzeit: 31.10 20:43:58,264| mit PID <0.2527.0>
-lokal registriert mit name: 116212 und Pid: <0.2527.0>
-..bind.done.
-Nameservice bind 
-Beim Koordinator angemeldet
-Linker Nachbar: 116121 (116121) gebunden 
-Rechter Nachbar: 116232 (116232) gebunden 
- initiales Mi 1575
- Y 1096332237
-116121 NameA drei@IDBM-PC NodeA
-116232 NameB drei@IDBM-PC NodeB
- Y 21
- Y 63
-116121 NameA drei@IDBM-PC NodeA
-116232 NameB drei@IDBM-PC NodeB
- Y 21
-116212@IDBM-PC Startzeit: 31.10 20:44:21,644| mit PID <0.2752.0>
-lokal registriert mit name: 116212 und Pid: <0.2752.0>
-..bind.done.
-Nameservice bind 
-Beim Koordinator angemeldet
-Linker Nachbar: 116222 (116222) gebunden 
-Rechter Nachbar: 116131 (116131) gebunden 
- initiales Mi 1815294
- Y 374
-116222 NameA drei@IDBM-PC NodeA
-116131 NameB drei@IDBM-PC NodeB
- Y 34
- Y 34
-116212@IDBM-PC Startzeit: 31.10 20:45:48,414| mit PID <0.3118.0>
-lokal registriert mit name: 116212 und Pid: <0.3118.0>
-..bind.done.
-Nameservice bind 
-Beim Koordinator angemeldet
-Linker Nachbar: 116222 (116222) gebunden 
-Rechter Nachbar: 116131 (116131) gebunden 
- initiales Mi 1815294
- Y 374
-116222 NameA drei@IDBM-PC NodeA
-116131 NameB drei@IDBM-PC NodeB
- Y 34
- Y 34
-lokal registriert mit name: 116212 und Pid: <0.3484.0>
-116212@IDBM-PC Startzeit: 31.10 20:59:29,943| mit PID <0.3484.0>
-..bind.done.
-Nameservice bind 
-Beim Koordinator angemeldet
-Linker Nachbar: 116222 (116222) gebunden 
-Rechter Nachbar: 116131 (116131) gebunden 
- initiales Mi 1815294
- Y 34
-116222 NameA drei@IDBM-PC NodeA
-116131 NameB drei@IDBM-PC NodeB
- Y 34
-lokal registriert mit name: 116212 und Pid: <0.4002.0>
-116212@IDBM-PC Startzeit: 31.10 21:03:19,674| mit PID <0.4002.0>
-..bind.done.
-Nameservice bind 
-Beim Koordinator angemeldet
-Linker Nachbar: 116222 (116222) gebunden 
-Rechter Nachbar: 116131 (116131) gebunden 
- initiales Mi 1815294
- Y 34
-116222 NameA drei@IDBM-PC NodeA
-116131 NameB drei@IDBM-PC NodeB
- Y 34
+ Y 67
