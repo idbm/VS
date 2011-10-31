@@ -32,14 +32,14 @@ start(StarterName,Elem,Nummer,ArbeitsZeit,TermZeit, Koordinatorname, Nameservice
   werkzeug:logging(Datei,"Beim Koordinator angemeldet\n").
 	
   
-ggt(X,X,State)-> abs(X);
-ggt(X,0,State)->  abs(X);
-ggt(0,X,State)->  abs(X);
-ggt(Mi,Y,State) when Y < Mi ->  
+ggt(X,X)-> abs(X);
+ggt(X,0)->  abs(X);
+ggt(0,X)->  abs(X);
+ggt(Mi,Y) when Y < Mi ->  
   
-  MiNeu=ggt(Y,((Mi-1) rem Y)+ 1,State), MiNeu;
+  MiNeu=ggt(Y,((Mi-1) rem Y)+ 1), MiNeu;
 
-ggt(Mi,Y,State) when Y > Mi -> MiNeu=ggt(Mi,((Y-1) rem Mi)+ 1,State), MiNeu.
+ggt(Mi,Y) when Y > Mi -> MiNeu=ggt(Mi,((Y-1) rem Mi)+ 1), MiNeu.
             
     
   
@@ -47,9 +47,9 @@ ggt(Mi,Y,State) when Y > Mi -> MiNeu=ggt(Mi,((Y-1) rem Mi)+ 1,State), MiNeu.
   
 loop(State)->
   Datei= State#worker.datei,
-  Koordinatorname= State#worker.koordinatorname,
-  Clientname= State#worker.clientname,
-  Nameservice = global:whereis_name(nameservice),
+ 
+  
+ 
          
   receive
     {setneighbors,LeftN,RightN} ->
@@ -66,18 +66,16 @@ loop(State)->
       {sendy,Y} -> 
         werkzeug:logging(Datei,lists:concat([" Y ", Y, "\n"])),
         Mi = State#worker.mi,  
-        LN = State#worker.linkerNachbar,
-        RN = State#worker.rechterNach,  
-        MiNeu = ggt(Mi,Y,State),
+        MiNeu = ggt(Mi,Y),
         case {Mi =/= MiNeu} of
-          {true}-> spawn(fun() -> rekursion(MiNeu,Mi,State)end), Opts = State#worker{mi=MiNeu}, loop(Opts);
+          {true}-> spawn(fun() -> rekursion(MiNeu,State)end), Opts = State#worker{mi=MiNeu}, loop(Opts);
           {false}-> loop(State)
         end
         
        
     end.
     
-    rekursion(MiNeu, Mi,State)->
+    rekursion(MiNeu,State)->
       LN = State#worker.linkerNachbar,
       RN = State#worker.rechterNach, 
       Datei= State#worker.datei,

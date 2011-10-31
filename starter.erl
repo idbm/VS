@@ -29,24 +29,16 @@ start(Nummer) ->
     receive ok -> werkzeug:logging(Datei,"..bind.done.\n");
             in_use -> werkzeug:logging(Datei,"..schon gebunden.\n")
           end.
-	%%register(StarterName,StarterPid).
-	
-  
-  %%werkzeug:logging(Datei, lists:concat(["Ping erfolgreich: ", X, " \n"])).
-  
-  
-  
+	  
   loop(State, Nummer) ->
     Datei= State#state1.datei,
     StarterName = State#state1.startername,
     Nameservicenode = State#state1.nameservicenode,
     
-    %%Koordinatornode = State#state1.koordinatornode,
-    Koordinatorname = State#state1.koordinatorname,
+     Koordinatorname = State#state1.koordinatorname,
         
 	  werkzeug:logging(Datei,"Nameservice bind \n"),
-	  %%net_adm:ping(Koordinatornode),
-    %%Chef = global:whereis_name(Koordinatorname),    
+	  
     Nameservice = global:whereis_name(nameservice),
     Nameservice ! {self(),{lookup,Koordinatorname}},
             receive
@@ -64,4 +56,4 @@ start(Nummer) ->
                                   end;
                not_found -> werkzeug:logging(Datei,lists:concat([Koordinatorname, " not founded"]))
             end.
-    %%werkzeug:logging(State#state.datei,"ArbeitsZeit \n").
+   

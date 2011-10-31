@@ -15,3 +15,103 @@ Rechter Nachbar: 116535 (116535) gebunden
 116323 NameA drei@IDBM-PC NodeA
 116535 NameB vier@IDBM-PC NodeB
  Y 67
+116333@IDBM-PC Startzeit: 31.10 20:35:01,684| mit PID <0.2017.0>
+lokal registriert mit name: 116333 und Pid: <0.2017.0>
+..bind.done.
+Nameservice bind 
+Beim Koordinator angemeldet
+Linker Nachbar: 116313 (116313) gebunden 
+Rechter Nachbar: 116232 (116232) gebunden 
+ initiales Mi 4161258946
+ Y 15991118
+116313 NameA drei@IDBM-PC NodeA
+116232 NameB drei@IDBM-PC NodeB
+ Y 10166
+ Y 442
+116313 NameA drei@IDBM-PC NodeA
+116313 NameA drei@IDBM-PC NodeA
+116232 NameB drei@IDBM-PC NodeB
+116232 NameB drei@IDBM-PC NodeB
+ Y 34
+ Y 34
+116313 NameA drei@IDBM-PC NodeA
+116232 NameB drei@IDBM-PC NodeB
+116333@IDBM-PC Startzeit: 31.10 20:44:22,414| mit PID <0.2809.0>
+lokal registriert mit name: 116333 und Pid: <0.2809.0>
+..bind.done.
+Nameservice bind 
+Beim Koordinator angemeldet
+Linker Nachbar: 116313 (116313) gebunden 
+Rechter Nachbar: 116232 (116232) gebunden 
+ initiales Mi 4161258946
+ Y 4137562
+116313 NameA drei@IDBM-PC NodeA
+116232 NameB drei@IDBM-PC NodeB
+ Y 16354
+ Y 376142
+ Y 34
+116313 NameA drei@IDBM-PC NodeA
+116313 NameA drei@IDBM-PC NodeA
+116232 NameB drei@IDBM-PC NodeB
+116232 NameB drei@IDBM-PC NodeB
+ Y 34
+116333@IDBM-PC Startzeit: 31.10 20:45:49,624| mit PID <0.3173.0>
+lokal registriert mit name: 116333 und Pid: <0.3173.0>
+..bind.done.
+Nameservice bind 
+Beim Koordinator angemeldet
+Linker Nachbar: 116313 (116313) gebunden 
+Rechter Nachbar: 116232 (116232) gebunden 
+ initiales Mi 4161258946
+ Y 4137562
+116313 NameA drei@IDBM-PC NodeA
+116232 NameB drei@IDBM-PC NodeB
+ Y 16354
+ Y 376142
+ Y 34
+116313 NameA drei@IDBM-PC NodeA
+116313 NameA drei@IDBM-PC NodeA
+116232 NameB drei@IDBM-PC NodeB
+116232 NameB drei@IDBM-PC NodeB
+ Y 34
+116333@IDBM-PC Startzeit: 31.10 20:59:30,524| mit PID <0.3541.0>
+lokal registriert mit name: 116333 und Pid: <0.3541.0>
+..bind.done.
+Nameservice bind 
+Beim Koordinator angemeldet
+Linker Nachbar: 116313 (116313) gebunden 
+Rechter Nachbar: 116232 (116232) gebunden 
+ initiales Mi 4161258946
+ Y 408850
+ Y 2795650
+116313 NameA drei@IDBM-PC NodeA
+116313 NameA drei@IDBM-PC NodeA
+116232 NameB drei@IDBM-PC NodeB
+116232 NameB drei@IDBM-PC NodeB
+ Y 442
+ Y 16354
+ Y 34
+ Y 442
+116313 NameA drei@IDBM-PC NodeA
+116232 NameB drei@IDBM-PC NodeB
+ Y 34
+116333@IDBM-PC Startzeit: 31.10 21:03:21,434| mit PID <0.4059.0>
+lokal registriert mit name: 116333 und Pid: <0.4059.0>
+..bind.done.
+Nameservice bind 
+Beim Koordinator angemeldet
+Linker Nachbar: 116313 (116313) gebunden 
+Rechter Nachbar: 116232 (116232) gebunden 
+ initiales Mi 4161258946
+ Y 2795650
+116313 NameA drei@IDBM-PC NodeA
+116232 NameB drei@IDBM-PC NodeB
+ Y 442
+ Y 10166
+116313 NameA drei@IDBM-PC NodeA
+116232 NameB drei@IDBM-PC NodeB
+ Y 442
+ Y 34
+116313 NameA drei@IDBM-PC NodeA
+116232 NameB drei@IDBM-PC NodeB
+ Y 34

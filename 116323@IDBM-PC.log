@@ -14,3 +14,74 @@ Rechter Nachbar: 116333 (116333) gebunden
 116434 NameA vier@IDBM-PC NodeA
  Y 67
 116333 NameB drei@IDBM-PC NodeB
+116323@IDBM-PC Startzeit: 31.10 20:35:01,684| mit PID <0.2014.0>
+lokal registriert mit name: 116323 und Pid: <0.2014.0>
+..bind.done.
+Nameservice bind 
+Beim Koordinator angemeldet
+Linker Nachbar: 116232 (116232) gebunden 
+Rechter Nachbar: 116121 (116121) gebunden 
+ initiales Mi 4114
+ Y 442
+116232 NameA drei@IDBM-PC NodeA
+116121 NameB drei@IDBM-PC NodeB
+ Y 34
+ Y 34
+116323@IDBM-PC Startzeit: 31.10 20:44:22,414| mit PID <0.2806.0>
+lokal registriert mit name: 116323 und Pid: <0.2806.0>
+..bind.done.
+Nameservice bind 
+Beim Koordinator angemeldet
+Linker Nachbar: 116232 (116232) gebunden 
+Rechter Nachbar: 116121 (116121) gebunden 
+ initiales Mi 4114
+ Y 1267214850
+ Y 16354
+116232 NameA drei@IDBM-PC NodeA
+ Y 34
+116121 NameB drei@IDBM-PC NodeB
+ Y 34
+116323@IDBM-PC Startzeit: 31.10 20:45:49,624| mit PID <0.3170.0>
+lokal registriert mit name: 116323 und Pid: <0.3170.0>
+..bind.done.
+Nameservice bind 
+Beim Koordinator angemeldet
+Linker Nachbar: 116232 (116232) gebunden 
+Rechter Nachbar: 116121 (116121) gebunden 
+ initiales Mi 4114
+ Y 1267214850
+ Y 16354
+116232 NameA drei@IDBM-PC NodeA
+116121 NameB drei@IDBM-PC NodeB
+ Y 34
+ Y 34
+116323@IDBM-PC Startzeit: 31.10 20:59:30,524| mit PID <0.3538.0>
+lokal registriert mit name: 116323 und Pid: <0.3538.0>
+..bind.done.
+Nameservice bind 
+Beim Koordinator angemeldet
+Linker Nachbar: 116232 (116232) gebunden 
+Rechter Nachbar: 116121 (116121) gebunden 
+ initiales Mi 4114
+ Y 79955590
+ Y 408850
+116232 NameA drei@IDBM-PC NodeA
+116121 NameB drei@IDBM-PC NodeB
+ Y 16354
+ Y 442
+ Y 34
+ Y 34
+116323@IDBM-PC Startzeit: 31.10 21:03:21,434| mit PID <0.4056.0>
+lokal registriert mit name: 116323 und Pid: <0.4056.0>
+..bind.done.
+Nameservice bind 
+Beim Koordinator angemeldet
+Linker Nachbar: 116232 (116232) gebunden 
+Rechter Nachbar: 116121 (116121) gebunden 
+ initiales Mi 4114
+ Y 79955590
+ Y 442
+116232 NameA drei@IDBM-PC NodeA
+116121 NameB drei@IDBM-PC NodeB
+ Y 34
+ Y 34
