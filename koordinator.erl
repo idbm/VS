@@ -109,7 +109,7 @@ start() ->
         {bereit} ->
           Opts =State#state{zustand=bereit},
           werkzeug:logging(Datei,"Anmeldefrist fuer ggT-Prozesse abgelaufen.\n"), 
-          List = State#state.ggt_prozesse ,
+          List = State#state.ggt_prozesse,
           io:format("List~p~n",[List]),
           AnzahlDerProzesse = length(List),
           werkzeug:logging(Datei,lists:concat(["Anzahl der Prozesse: ", AnzahlDerProzesse, "\n"])), 
@@ -135,8 +135,65 @@ start() ->
             end,
           init(Opts)
         end;
-        {bereit} -> werkzeug:logging(Datei,"Ich bin jetzt bereit \n")
-                                    
+        
+        
+        {bereit} -> 
+          werkzeug:logging(Datei,"Ich bin jetzt bereit \n"),
+          List = State#state.ggt_prozesse,
+          Nameservice = global:whereis_name(nameservice),
+          Ggt_gewuenscht =random:uniform(100),
+          werkzeug:logging(Datei,lists:concat(["Ziel:" , Ggt_gewuenscht, "\n"])),
+          lists:foreach(fun(Elem)->
+            Nameservice ! {self(),{lookup,Elem}},
+            receive
+              {NameA,NodeA} -> Mi = Ggt_gewuenscht * lists:foldl(fun(X,Acc)-> trunc(math:pow(X,(-1 + random:uniform(3)))) * Acc end, 1, [3,5,11,13,23,37]), 
+                            {NameA,NodeA}! {setpm,Mi}, werkzeug:logging(Datei,lists:concat(["ggt-Prozess ", NameA, " (", NodeA,") initiales Mi ", Mi, " gesendet\n"])) ;
+              not_found -> werkzeug:logging(Datei,lists:concat([Elem, " not founded"]))
+            end
           
+          end,List),
+          
+          Nameservice ! {self(),{lookup,hd(List)}},
+           receive
+              {Name,Node} -> Y = Ggt_gewuenscht * lists:foldl(fun(X,Acc)-> trunc(math:pow(X,(-1 + random:uniform(3)))) * Acc end, 1, [3,5,11,13,23,37]), 
+                            {Name,Node}! {sendy,Y}, werkzeug:logging(Datei,lists:concat(["ggt-Prozess ", Name, " (", Node,") initiales Y ", Y, " gesendet\n"])) ;
+              not_found -> werkzeug:logging(Datei,lists:concat([hd(List), " not founded"]))
+            end,
+            berechne(Datei) 
+          
+         %% Number_selected = round((length(List)*15)/100),
+         %% werkzeug:logging(Datei,lists:concat(["NumberOfProt: ", Number_selected, " \n"])),
+         %% ProsList =shuffle(List),
+        %%  case {(Number_selected < 2)} of
+         %%   {true} -> NewList = lists:sublist(ProsList, Number_selected+3),
+          %%            lists:foreach(fun(Elem)->
+          %%              Nameservice ! {self(),{lookup,Elem}},
+              %%          receive
+                %%          {Name,Node} ->  Y = Ggt_gewuenscht * lists:foldl(fun(X,Acc)-> trunc(math:pow(X,(-1 + random:uniform(3)))) * Acc end, 1, [3,5,11,13,23,37]), 
+                 %%                         {Name,Node}! {sendy,Y}, werkzeug:logging(Datei,lists:concat(["ggt-Prozess ", Name, " (", Node,") initiales Y ", Y, " gesendet\n"])) ;
+                  %%        not_found -> werkzeug:logging(Datei,lists:concat([Elem, " not founded"]))
+                   %%     end
+                      
+                    %%  end,NewList), berechne(Datei) ;
             
+           %% {false}-> NewList = lists:sublist(ProsList, Number_selected+1),
+               %%       lists:foreach(fun(Elem)->
+              %%        Nameservice ! {self(),{lookup,Elem}},
+                %%      receive
+                %%        {Name,Node} -> Y = Ggt_gewuenscht * lists:foldl(fun(X,Acc)-> trunc(math:pow(X,(-1 + random:uniform(3)))) * Acc end, 1, [3,5,11,13,23,37]), 
+                          %%            {Name,Node}! {sendy,Y}, werkzeug:logging(Datei,lists:concat(["ggt-Prozess ", Name, " (", Node,") Initiales Y ", Y, " gesendet\n"]));
+                       %% not_found -> werkzeug:logging(Datei,lists:concat([Elem, " not founded"]))
+                     %% end
+                    
+                   %%  end,NewList), berechne(Datei) 
+            
+         %% end
+          
+                  
         end.
+        
+        
+    berechne(Datei)-> 
+    receive
+            {briefmi,{Clientname,CMi,CZeit}} -> werkzeug:logging(Datei,lists:concat(["ggt-Prozess ", Clientname, " meldet neues Mi ", CMi, " um", CZeit,"\n"])) , berechne(Datei)
+          end.    

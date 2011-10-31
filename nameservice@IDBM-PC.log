@@ -1,57 +1,124 @@
-Nameservice Startzeit: 28.10 19:44:30,789| mit PID <0.560.0> registriert mit Namen 'nameservice'.
-rebind um 28.10 19:44:39,559| von <9302.192.0>: {chef,zwei@IDBM-PC}.
-lookup um 28.10 19:44:48,409| von <9305.732.0>:{chef,zwei@IDBM-PC}.
-rebind um 28.10 19:44:48,410| von <9305.61.0>: {1161,drei@IDBM-PC}.
-rebind um 28.10 19:44:48,730| von <9305.740.0>: {116111,drei@IDBM-PC}.
-rebind um 28.10 19:44:48,730| von <9305.741.0>: {116121,drei@IDBM-PC}.
-rebind um 28.10 19:44:48,730| von <9305.742.0>: {116131,drei@IDBM-PC}.
-lookup um 28.10 19:44:51,590| von <9305.783.0>:{chef,zwei@IDBM-PC}.
-rebind um 28.10 19:44:51,900| von <9305.61.0>: {1162,drei@IDBM-PC}.
-rebind um 28.10 19:44:51,900| von <9305.790.0>: {116212,drei@IDBM-PC}.
-rebind um 28.10 19:44:51,900| von <9305.791.0>: {116222,drei@IDBM-PC}.
-rebind um 28.10 19:44:51,900| von <9305.792.0>: {116232,drei@IDBM-PC}.
-lookup um 28.10 19:44:54,229| von <9305.834.0>:{chef,zwei@IDBM-PC}.
-rebind um 28.10 19:44:54,230| von <9305.61.0>: {1163,drei@IDBM-PC}.
-rebind um 28.10 19:44:54,379| von <9305.841.0>: {116313,drei@IDBM-PC}.
-rebind um 28.10 19:44:54,540| von <9305.842.0>: {116323,drei@IDBM-PC}.
-rebind um 28.10 19:44:54,540| von <9305.843.0>: {116333,drei@IDBM-PC}.
-lookup um 28.10 19:45:00,789| von <9316.447.0>:{chef,zwei@IDBM-PC}.
-rebind um 28.10 19:45:00,790| von <9316.61.0>: {1164,vier@IDBM-PC}.
-rebind um 28.10 19:45:00,100| von <9316.455.0>: {116414,vier@IDBM-PC}.
-rebind um 28.10 19:45:00,100| von <9316.456.0>: {116424,vier@IDBM-PC}.
-rebind um 28.10 19:45:00,100| von <9316.457.0>: {116434,vier@IDBM-PC}.
-lookup um 28.10 19:45:01,209| von <9316.498.0>:{chef,zwei@IDBM-PC}.
-rebind um 28.10 19:45:01,359| von <9316.61.0>: {1165,vier@IDBM-PC}.
-rebind um 28.10 19:45:01,679| von <9316.506.0>: {116515,vier@IDBM-PC}.
-rebind um 28.10 19:45:01,680| von <9316.507.0>: {116525,vier@IDBM-PC}.
-rebind um 28.10 19:45:01,680| von <9316.508.0>: {116535,vier@IDBM-PC}.
-lookup um 28.10 19:45:06,359| von <9302.464.0>:{116535,vier@IDBM-PC}.
-lookup um 28.10 19:45:06,510| von <9302.464.0>:{116525,vier@IDBM-PC}.
-lookup um 28.10 19:45:06,510| von <9302.464.0>:{116515,vier@IDBM-PC}.
-lookup um 28.10 19:45:06,670| von <9302.464.0>:{116434,vier@IDBM-PC}.
-lookup um 28.10 19:45:06,670| von <9302.464.0>:{116424,vier@IDBM-PC}.
-lookup um 28.10 19:45:06,819| von <9302.464.0>:{116414,vier@IDBM-PC}.
-lookup um 28.10 19:45:06,820| von <9302.464.0>:{116333,drei@IDBM-PC}.
-lookup um 28.10 19:45:06,979| von <9302.464.0>:{116323,drei@IDBM-PC}.
-lookup um 28.10 19:45:06,980| von <9302.464.0>:{116313,drei@IDBM-PC}.
-lookup um 28.10 19:45:06,140| von <9302.464.0>:{116232,drei@IDBM-PC}.
-lookup um 28.10 19:45:06,140| von <9302.464.0>:{116222,drei@IDBM-PC}.
-lookup um 28.10 19:45:06,290| von <9302.464.0>:{116212,drei@IDBM-PC}.
-lookup um 28.10 19:45:06,290| von <9302.464.0>:{116131,drei@IDBM-PC}.
-lookup um 28.10 19:45:06,290| von <9302.464.0>:{116121,drei@IDBM-PC}.
-lookup um 28.10 19:45:06,449| von <9302.464.0>:{116111,drei@IDBM-PC}.
-lookup um 28.10 19:45:06,760| von <9302.464.0>:{116424,vier@IDBM-PC}.
-lookup um 28.10 19:45:06,760| von <9302.464.0>:{116131,drei@IDBM-PC}.
-lookup um 28.10 19:45:06,760| von <9302.464.0>:{116414,vier@IDBM-PC}.
-lookup um 28.10 19:45:06,920| von <9302.464.0>:{116111,drei@IDBM-PC}.
-lookup um 28.10 19:45:06,920| von <9302.464.0>:{116232,drei@IDBM-PC}.
-lookup um 28.10 19:45:06,069| von <9302.464.0>:{116222,drei@IDBM-PC}.
-lookup um 28.10 19:45:06,070| von <9302.464.0>:{116212,drei@IDBM-PC}.
-lookup um 28.10 19:45:06,380| von <9302.464.0>:{116121,drei@IDBM-PC}.
-lookup um 28.10 19:45:06,380| von <9302.464.0>:{116525,vier@IDBM-PC}.
-lookup um 28.10 19:45:06,540| von <9302.464.0>:{116313,drei@IDBM-PC}.
-lookup um 28.10 19:45:06,540| von <9302.464.0>:{116515,vier@IDBM-PC}.
-lookup um 28.10 19:45:06,540| von <9302.464.0>:{116434,vier@IDBM-PC}.
-lookup um 28.10 19:45:06,699| von <9302.464.0>:{116323,drei@IDBM-PC}.
-lookup um 28.10 19:45:06,700| von <9302.464.0>:{116333,drei@IDBM-PC}.
-lookup um 28.10 19:45:06,700| von <9302.464.0>:{116535,vier@IDBM-PC}.
+Nameservice Startzeit: 31.10 19:04:40,505| mit PID <0.877.0> registriert mit Namen 'nameservice'.
+rebind um 31.10 19:04:50,605| von <9128.55.0>: {chef,zwei@IDBM-PC}.
+rebind um 31.10 19:04:58,375| von <9128.55.0>: {chef,zwei@IDBM-PC}.
+lookup um 31.10 19:05:08,095| von <9130.1532.0>:{chef,zwei@IDBM-PC}.
+rebind um 31.10 19:05:08,255| von <9130.70.0>: {1161,drei@IDBM-PC}.
+rebind um 31.10 19:05:08,565| von <9130.1543.0>: {116111,drei@IDBM-PC}.
+rebind um 31.10 19:05:08,565| von <9130.1544.0>: {116121,drei@IDBM-PC}.
+rebind um 31.10 19:05:08,725| von <9130.1545.0>: {116131,drei@IDBM-PC}.
+lookup um 31.10 19:05:09,735| von <9130.1583.0>:{chef,zwei@IDBM-PC}.
+rebind um 31.10 19:05:09,735| von <9130.70.0>: {1162,drei@IDBM-PC}.
+rebind um 31.10 19:05:09,895| von <9130.1591.0>: {116212,drei@IDBM-PC}.
+rebind um 31.10 19:05:09,895| von <9130.1592.0>: {116222,drei@IDBM-PC}.
+rebind um 31.10 19:05:09,895| von <9130.1593.0>: {116232,drei@IDBM-PC}.
+lookup um 31.10 19:05:12,055| von <9130.1634.0>:{chef,zwei@IDBM-PC}.
+rebind um 31.10 19:05:12,055| von <9130.70.0>: {1163,drei@IDBM-PC}.
+rebind um 31.10 19:05:12,045| von <9130.1644.0>: {116313,drei@IDBM-PC}.
+rebind um 31.10 19:05:12,045| von <9130.1645.0>: {116323,drei@IDBM-PC}.
+rebind um 31.10 19:05:12,045| von <9130.1646.0>: {116333,drei@IDBM-PC}.
+lookup um 31.10 19:05:23,825| von <9223.564.0>:{chef,zwei@IDBM-PC}.
+rebind um 31.10 19:05:23,825| von <9223.56.0>: {1164,vier@IDBM-PC}.
+rebind um 31.10 19:05:23,975| von <9223.572.0>: {116414,vier@IDBM-PC}.
+rebind um 31.10 19:05:23,975| von <9223.573.0>: {116424,vier@IDBM-PC}.
+rebind um 31.10 19:05:23,975| von <9223.574.0>: {116434,vier@IDBM-PC}.
+lookup um 31.10 19:05:25,305| von <9223.615.0>:{chef,zwei@IDBM-PC}.
+rebind um 31.10 19:05:25,305| von <9223.56.0>: {1165,vier@IDBM-PC}.
+rebind um 31.10 19:05:25,615| von <9223.623.0>: {116515,vier@IDBM-PC}.
+rebind um 31.10 19:05:25,615| von <9223.624.0>: {116525,vier@IDBM-PC}.
+rebind um 31.10 19:05:25,615| von <9223.625.0>: {116535,vier@IDBM-PC}.
+lookup um 31.10 19:05:33,550| von <9128.919.0>:{116535,vier@IDBM-PC}.
+lookup um 31.10 19:05:33,550| von <9128.919.0>:{116525,vier@IDBM-PC}.
+lookup um 31.10 19:05:33,355| von <9128.919.0>:{116515,vier@IDBM-PC}.
+lookup um 31.10 19:05:33,355| von <9128.919.0>:{116434,vier@IDBM-PC}.
+lookup um 31.10 19:05:33,955| von <9128.919.0>:{116424,vier@IDBM-PC}.
+lookup um 31.10 19:05:33,955| von <9128.919.0>:{116414,vier@IDBM-PC}.
+lookup um 31.10 19:05:33,955| von <9128.919.0>:{116333,drei@IDBM-PC}.
+lookup um 31.10 19:05:33,955| von <9128.919.0>:{116323,drei@IDBM-PC}.
+lookup um 31.10 19:05:33,555| von <9128.919.0>:{116313,drei@IDBM-PC}.
+lookup um 31.10 19:05:33,555| von <9128.919.0>:{116232,drei@IDBM-PC}.
+lookup um 31.10 19:05:33,055| von <9128.919.0>:{116222,drei@IDBM-PC}.
+lookup um 31.10 19:05:33,055| von <9128.919.0>:{116212,drei@IDBM-PC}.
+lookup um 31.10 19:05:33,655| von <9128.919.0>:{116131,drei@IDBM-PC}.
+lookup um 31.10 19:05:33,655| von <9128.919.0>:{116121,drei@IDBM-PC}.
+lookup um 31.10 19:05:33,655| von <9128.919.0>:{116111,drei@IDBM-PC}.
+lookup um 31.10 19:05:33,015| von <9128.919.0>:{116424,vier@IDBM-PC}.
+lookup um 31.10 19:05:33,015| von <9128.919.0>:{116131,drei@IDBM-PC}.
+lookup um 31.10 19:05:33,015| von <9128.919.0>:{116414,vier@IDBM-PC}.
+lookup um 31.10 19:05:33,175| von <9128.919.0>:{116111,drei@IDBM-PC}.
+lookup um 31.10 19:05:33,175| von <9128.919.0>:{116232,drei@IDBM-PC}.
+lookup um 31.10 19:05:33,335| von <9128.919.0>:{116222,drei@IDBM-PC}.
+lookup um 31.10 19:05:33,335| von <9128.919.0>:{116212,drei@IDBM-PC}.
+lookup um 31.10 19:05:33,485| von <9128.919.0>:{116121,drei@IDBM-PC}.
+lookup um 31.10 19:05:33,645| von <9128.919.0>:{116525,vier@IDBM-PC}.
+lookup um 31.10 19:05:33,795| von <9128.919.0>:{116313,drei@IDBM-PC}.
+lookup um 31.10 19:05:33,795| von <9128.919.0>:{116515,vier@IDBM-PC}.
+lookup um 31.10 19:05:33,795| von <9128.919.0>:{116434,vier@IDBM-PC}.
+lookup um 31.10 19:05:33,795| von <9128.919.0>:{116323,drei@IDBM-PC}.
+lookup um 31.10 19:05:33,955| von <9128.919.0>:{116333,drei@IDBM-PC}.
+lookup um 31.10 19:05:33,955| von <9128.919.0>:{116535,vier@IDBM-PC}.
+lookup um 31.10 19:05:33,955| von <9128.919.0>:{116535,vier@IDBM-PC}.
+lookup um 31.10 19:05:33,955| von <9128.919.0>:{116525,vier@IDBM-PC}.
+lookup um 31.10 19:05:33,955| von <9128.919.0>:{116515,vier@IDBM-PC}.
+lookup um 31.10 19:05:33,955| von <9128.919.0>:{116434,vier@IDBM-PC}.
+lookup um 31.10 19:05:33,425| von <9128.919.0>:{116424,vier@IDBM-PC}.
+lookup um 31.10 19:05:33,575| von <9128.919.0>:{116414,vier@IDBM-PC}.
+lookup um 31.10 19:05:33,575| von <9128.919.0>:{116333,drei@IDBM-PC}.
+lookup um 31.10 19:05:33,895| von <9128.919.0>:{116323,drei@IDBM-PC}.
+lookup um 31.10 19:05:33,895| von <9128.919.0>:{116313,drei@IDBM-PC}.
+lookup um 31.10 19:05:33,895| von <9128.919.0>:{116232,drei@IDBM-PC}.
+lookup um 31.10 19:05:33,895| von <9128.919.0>:{116222,drei@IDBM-PC}.
+lookup um 31.10 19:05:33,045| von <9128.919.0>:{116212,drei@IDBM-PC}.
+lookup um 31.10 19:05:33,045| von <9128.919.0>:{116131,drei@IDBM-PC}.
+lookup um 31.10 19:05:33,355| von <9128.919.0>:{116121,drei@IDBM-PC}.
+lookup um 31.10 19:05:33,515| von <9128.919.0>:{116111,drei@IDBM-PC}.
+lookup um 31.10 19:05:33,985| von <9128.919.0>:{116535,vier@IDBM-PC}.
+lookup um 31.10 19:05:33,135| von <9223.702.0>:{116333,drei@IDBM-PC}.
+lookup um 31.10 19:05:33,295| von <9223.702.0>:{116424,vier@IDBM-PC}.
+lookup um 31.10 19:05:33,295| von <9130.1739.0>:{116323,drei@IDBM-PC}.
+lookup um 31.10 19:05:33,455| von <9223.708.0>:{116535,vier@IDBM-PC}.
+lookup um 31.10 19:05:33,455| von <9130.1739.0>:{116535,vier@IDBM-PC}.
+lookup um 31.10 19:05:33,455| von <9130.1743.0>:{116434,vier@IDBM-PC}.
+lookup um 31.10 19:05:33,455| von <9223.708.0>:{116131,drei@IDBM-PC}.
+lookup um 31.10 19:05:33,455| von <9223.713.0>:{116333,drei@IDBM-PC}.
+lookup um 31.10 19:05:33,605| von <9223.713.0>:{116424,vier@IDBM-PC}.
+lookup um 31.10 19:05:33,605| von <9223.719.0>:{116515,vier@IDBM-PC}.
+lookup um 31.10 19:05:33,605| von <9130.1743.0>:{116333,drei@IDBM-PC}.
+lookup um 31.10 19:05:33,605| von <9130.1748.0>:{116424,vier@IDBM-PC}.
+lookup um 31.10 19:05:33,605| von <9223.719.0>:{116323,drei@IDBM-PC}.
+lookup um 31.10 19:05:33,605| von <9223.724.0>:{116313,drei@IDBM-PC}.
+lookup um 31.10 19:05:33,605| von <9130.1748.0>:{116414,vier@IDBM-PC}.
+lookup um 31.10 19:05:33,765| von <9223.724.0>:{116434,vier@IDBM-PC}.
+lookup um 31.10 19:05:33,765| von <9130.1755.0>:{116525,vier@IDBM-PC}.
+lookup um 31.10 19:05:33,765| von <9223.731.0>:{116131,drei@IDBM-PC}.
+lookup um 31.10 19:05:33,765| von <9130.1755.0>:{116515,vier@IDBM-PC}.
+lookup um 31.10 19:05:33,765| von <9130.1759.0>:{116424,vier@IDBM-PC}.
+lookup um 31.10 19:05:33,765| von <9223.733.0>:{116121,drei@IDBM-PC}.
+lookup um 31.10 19:05:33,765| von <9223.731.0>:{116111,drei@IDBM-PC}.
+lookup um 31.10 19:05:33,765| von <9223.737.0>:{116535,vier@IDBM-PC}.
+lookup um 31.10 19:05:33,765| von <9223.733.0>:{116313,drei@IDBM-PC}.
+lookup um 31.10 19:05:33,765| von <9130.1759.0>:{116414,vier@IDBM-PC}.
+lookup um 31.10 19:05:33,765| von <9130.1763.0>:{116212,drei@IDBM-PC}.
+lookup um 31.10 19:05:33,765| von <9130.1765.0>:{116414,vier@IDBM-PC}.
+lookup um 31.10 19:05:33,765| von <9223.737.0>:{116131,drei@IDBM-PC}.
+lookup um 31.10 19:05:33,765| von <9223.743.0>:{116333,drei@IDBM-PC}.
+lookup um 31.10 19:05:33,765| von <9223.743.0>:{116424,vier@IDBM-PC}.
+lookup um 31.10 19:05:33,765| von <9130.1763.0>:{116525,vier@IDBM-PC}.
+lookup um 31.10 19:05:33,765| von <9130.1765.0>:{116232,drei@IDBM-PC}.
+lookup um 31.10 19:05:33,765| von <9130.1771.0>:{116222,drei@IDBM-PC}.
+lookup um 31.10 19:05:33,765| von <9130.1774.0>:{116323,drei@IDBM-PC}.
+lookup um 31.10 19:05:33,765| von <9223.751.0>:{116121,drei@IDBM-PC}.
+lookup um 31.10 19:05:33,765| von <9223.751.0>:{116313,drei@IDBM-PC}.
+lookup um 31.10 19:05:33,765| von <9130.1771.0>:{116121,drei@IDBM-PC}.
+lookup um 31.10 19:05:33,765| von <9130.1779.0>:{116111,drei@IDBM-PC}.
+lookup um 31.10 19:05:33,765| von <9130.1781.0>:{116232,drei@IDBM-PC}.
+lookup um 31.10 19:05:33,765| von <9130.1784.0>:{116525,vier@IDBM-PC}.
+lookup um 31.10 19:05:33,765| von <9130.1774.0>:{116535,vier@IDBM-PC}.
+lookup um 31.10 19:05:33,765| von <9130.1788.0>:{116434,vier@IDBM-PC}.
+lookup um 31.10 19:05:33,765| von <9130.1779.0>:{116222,drei@IDBM-PC}.
+lookup um 31.10 19:05:33,765| von <9130.1781.0>:{116212,drei@IDBM-PC}.
+lookup um 31.10 19:05:33,765| von <9130.1784.0>:{116515,vier@IDBM-PC}.
+lookup um 31.10 19:05:33,765| von <9223.757.0>:{116515,vier@IDBM-PC}.
+lookup um 31.10 19:05:33,765| von <9223.757.0>:{116323,drei@IDBM-PC}.
+lookup um 31.10 19:05:33,765| von <9223.760.0>:{116313,drei@IDBM-PC}.
+lookup um 31.10 19:05:33,765| von <9130.1788.0>:{116333,drei@IDBM-PC}.
+lookup um 31.10 19:05:33,765| von <9223.760.0>:{116434,vier@IDBM-PC}.

@@ -1,7 +1,15 @@
-116131@IDBM-PC Startzeit: 28.10 19:44:48,790| mit PID <0.749.0>
-lokal registriert mit name: 116131 und Pid: <0.749.0>
+116131@IDBM-PC Startzeit: 31.10 19:05:08,608| mit PID <0.1552.0>
+lokal registriert mit name: 116131 und Pid: <0.1552.0>
 ..bind.done.
 Nameservice bind 
 Beim Koordinator angemeldet
 Linker Nachbar: 116424 (116424) gebunden 
 Rechter Nachbar: 116414 (116414) gebunden 
+ initiales Mi 42970785
+ Y 871
+116424 NameA vier@IDBM-PC NodeA
+116414 NameB vier@IDBM-PC NodeB
+ Y 67
+116424 NameA vier@IDBM-PC NodeA
+116414 NameB vier@IDBM-PC NodeB
+ Y 67

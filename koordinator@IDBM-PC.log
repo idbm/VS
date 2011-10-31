@@ -1,23 +1,26 @@
-Koordinator@IDBM-PC Startzeit: 28.10 19:44:39,438| mit PID <0.464.0>
+Koordinator@IDBM-PC Startzeit: 31.10 19:04:50,610| mit PID <0.904.0>
 koordinator.cfg gelesen 
 ..bind.done.
-getsteeringval: <9316.732.0>
+Koordinator@IDBM-PC Startzeit: 31.10 19:04:58,379| mit PID <0.919.0>
+koordinator.cfg gelesen 
+..bind.done.
+getsteeringval: <9421.1532.0>
 hello: 116111
 hello: 116121
 hello: 116131
-getsteeringval: <9316.783.0>
+getsteeringval: <9421.1583.0>
 hello: 116212
 hello: 116222
 hello: 116232
-getsteeringval: <9316.834.0>
+getsteeringval: <9421.1634.0>
 hello: 116313
 hello: 116323
 hello: 116333
-getsteeringval: <9327.447.0>
+getsteeringval: <9516.564.0>
 hello: 116414
 hello: 116424
 hello: 116434
-getsteeringval: <9327.498.0>
+getsteeringval: <9516.615.0>
 hello: 116515
 hello: 116525
 hello: 116535
@@ -53,3 +56,45 @@ ggT-Prozess 116323(drei@IDBM-PC) ueber linken (116434) und rechten (116333) info
 ggT-Prozess 116333(drei@IDBM-PC) ueber linken (116323) und rechten (116535) informiert. 
 ggT-Prozess 116535(vier@IDBM-PC) ueber linken (116333) und rechten (116424) informiert. 
 Ich bin jetzt bereit 
+Ziel:67
+ggt-Prozess 116535 (vier@IDBM-PC) initiales Mi 32463062775 gesendet
+ggt-Prozess 116525 (vier@IDBM-PC) initiales Mi 2056888275 gesendet
+ggt-Prozess 116515 (vier@IDBM-PC) initiales Mi 3577197 gesendet
+ggt-Prozess 116434 (vier@IDBM-PC) initiales Mi 15952365 gesendet
+ggt-Prozess 116424 (vier@IDBM-PC) initiales Mi 6522965163 gesendet
+ggt-Prozess 116414 (vier@IDBM-PC) initiales Mi 18425 gesendet
+ggt-Prozess 116333 (drei@IDBM-PC) initiales Mi 31511909 gesendet
+ggt-Prozess 116323 (drei@IDBM-PC) initiales Mi 197665611 gesendet
+ggt-Prozess 116313 (drei@IDBM-PC) initiales Mi 86229 gesendet
+ggt-Prozess 116232 (drei@IDBM-PC) initiales Mi 144538095 gesendet
+ggt-Prozess 116222 (drei@IDBM-PC) initiales Mi 74416160901225 gesendet
+ggt-Prozess 116212 (drei@IDBM-PC) initiales Mi 3899467 gesendet
+ggt-Prozess 116131 (drei@IDBM-PC) initiales Mi 42970785 gesendet
+ggt-Prozess 116121 (drei@IDBM-PC) initiales Mi 64329045 gesendet
+ggt-Prozess 116111 (drei@IDBM-PC) initiales Mi 2174321721 gesendet
+ggt-Prozess 116535 (vier@IDBM-PC) initiales Y 77505935 gesendet
+ggt-Prozess 116535 meldet neues Mi 5961995 um31.10 19:05:33,079|
+ggt-Prozess 116333 meldet neues Mi 871 um31.10 19:05:33,178|
+ggt-Prozess 116424 meldet neues Mi 871 um31.10 19:05:33,239|
+ggt-Prozess 116323 meldet neues Mi 871 um31.10 19:05:33,338|
+ggt-Prozess 116535 meldet neues Mi 871 um31.10 19:05:33,400|
+ggt-Prozess 116434 meldet neues Mi 871 um31.10 19:05:33,550|
+ggt-Prozess 116131 meldet neues Mi 871 um31.10 19:05:33,648|
+ggt-Prozess 116515 meldet neues Mi 871 um31.10 19:05:33,550|
+ggt-Prozess 116313 meldet neues Mi 871 um31.10 19:05:33,648|
+ggt-Prozess 116414 meldet neues Mi 67 um31.10 19:05:33,709|
+ggt-Prozess 116525 meldet neues Mi 871 um31.10 19:05:33,710|
+ggt-Prozess 116131 meldet neues Mi 67 um31.10 19:05:33,808|
+ggt-Prozess 116424 meldet neues Mi 67 um31.10 19:05:33,710|
+ggt-Prozess 116121 meldet neues Mi 67 um31.10 19:05:33,808|
+ggt-Prozess 116111 meldet neues Mi 67 um31.10 19:05:33,808|
+ggt-Prozess 116535 meldet neues Mi 67 um31.10 19:05:33,710|
+ggt-Prozess 116212 meldet neues Mi 67 um31.10 19:05:33,808|
+ggt-Prozess 116333 meldet neues Mi 67 um31.10 19:05:33,808|
+ggt-Prozess 116525 meldet neues Mi 67 um31.10 19:05:33,710|
+ggt-Prozess 116232 meldet neues Mi 67 um31.10 19:05:33,808|
+ggt-Prozess 116222 meldet neues Mi 67 um31.10 19:05:33,808|
+ggt-Prozess 116313 meldet neues Mi 67 um31.10 19:05:33,808|
+ggt-Prozess 116323 meldet neues Mi 67 um31.10 19:05:33,808|
+ggt-Prozess 116434 meldet neues Mi 67 um31.10 19:05:33,710|
+ggt-Prozess 116515 meldet neues Mi 67 um31.10 19:05:33,710|
