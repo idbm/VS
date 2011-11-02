@@ -14,31 +14,22 @@ start(Nummer) ->
   {ok, Teamnummer} = werkzeug:get_config_value(teamnummer, ConfigListe),
   {ok, Nameservicenode} = werkzeug:get_config_value(nameservicenode, ConfigListe),
   {ok, Koordinatorname} = werkzeug:get_config_value(koordinatorname, ConfigListe),
-  %%{ok, Koordinatornode} = werkzeug:get_config_value(koordinatornode, ConfigListe),
+  werkzeug:logging(Datei,"ggt.cfg gelesen \n"),
   
   StarterName = lists:concat([Praktikumsgruppe,Teamnummer,Nummer]),
   StarterPid = spawn(fun() -> loop(#state1{startername=StarterName, koordinatorname=Koordinatorname, datei=Datei, nameservicenode=Nameservicenode}, Nummer) end),
 	
   Zeit = lists:concat(["Starter@",HostName," Startzeit: ",werkzeug:timeMilliSecond()]),
 	Inhalt = lists:concat([Zeit," mit PID ", pid_to_list(StarterPid), "\n"]),
-	werkzeug:logging(Datei,Inhalt),
-	werkzeug:logging(Datei,"ggt.cfg gelesen \n"),
-	  net_adm:ping(Nameservicenode),
-  	Nameservice = global:whereis_name(nameservice),
-  	Nameservice ! {self(),{rebind, StarterName ,node()}},
-    receive ok -> werkzeug:logging(Datei,"..bind.done.\n");
-            in_use -> werkzeug:logging(Datei,"..schon gebunden.\n")
-          end.
-	  
-  loop(State, Nummer) ->
+	werkzeug:logging(Datei,Inhalt).
+	
+	loop(State, Nummer) ->
     Datei= State#state1.datei,
     StarterName = State#state1.startername,
     Nameservicenode = State#state1.nameservicenode,
-    
-     Koordinatorname = State#state1.koordinatorname,
-        
-	  werkzeug:logging(Datei,"Nameservice bind \n"),
-	  
+    Koordinatorname = State#state1.koordinatorname,
+        	 
+	  net_adm:ping(Nameservicenode),
     Nameservice = global:whereis_name(nameservice),
     Nameservice ! {self(),{lookup,Koordinatorname}},
             receive

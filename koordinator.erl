@@ -7,7 +7,7 @@
 start() ->
 	{ok, HostName} = inet:gethostname(),
 	Datei = lists:concat(["koordinator@",HostName,".log"]),	
-			
+	
 	{ok, ConfigListe} = file:consult("koordinator.cfg"),
   {ok, Nameservicenode} = werkzeug:get_config_value(nameservicenode, ConfigListe),
   {ok, Koordinatorname} = werkzeug:get_config_value(koordinatorname, ConfigListe),
@@ -16,25 +16,34 @@ start() ->
   {ok, Arbeitszeit} = werkzeug:get_config_value(arbeitszeit, ConfigListe),
 	werkzeug:logging(Datei,"koordinator.cfg gelesen \n"),
 	
-  KoordinatorPid = spawn(fun() -> init(#state{anzahl_ggt_prozesse=Ggtprozessnummer, verzoegerungszeit=Arbeitszeit, timeout=Termzeit, datei=Datei, nameservicenode=Nameservicenode, koordinatorname=Koordinatorname}) end),
+	
+	KoordinatorPid = spawn(fun() -> init(#state{anzahl_ggt_prozesse=Ggtprozessnummer, verzoegerungszeit=Arbeitszeit, timeout=Termzeit, datei=Datei, nameservicenode=Nameservicenode, koordinatorname=Koordinatorname}) end),
+  
 	Zeit = lists:concat(["Koordinator@",HostName," Startzeit: ",werkzeug:timeMilliSecond()]),
-	Inhalt = lists:concat([Zeit," mit PID ", pid_to_list(KoordinatorPid), "\n"]),
+	Inhalt = lists:concat([Zeit," mit PID ", pid_to_list((KoordinatorPid)), "\n"]),
 	werkzeug:logging(Datei,Inhalt),
 	
-	%% Beim Nameserver anmelden
+	
+
+	
 	net_adm:ping(Nameservicenode),
 	Nameservice = global:whereis_name(nameservice),
 	Nameservice ! {self(),{rebind, Koordinatorname ,node()}},
     receive ok -> werkzeug:logging(Datei,"..bind.done.\n");
             in_use -> werkzeug:logging(Datei,"..schon gebunden.\n")
     end,
-  
-  %% Lokal registrieren    
-  case {is_pid(whereis(Koordinatorname))} of
+	
+    case {is_pid(whereis(Koordinatorname))} of
 	  {true} -> unregister(Koordinatorname);
 	  {false} -> ok
 	end,
   erlang:register(Koordinatorname,KoordinatorPid),
+  
+	
+	
+	%% Beim Nameserver anmelden
+	%% Lokal registrieren    
+  
 	KoordinatorPid.       
       	
  init(State) ->
@@ -114,10 +123,10 @@ start() ->
                 ProsList =shuffle(List),                                                              %% Liste wird gemischt(für den Zufallfaktor)  
                 case {(Number_selected < 2)} of                                                       %% Initiales Y wird geschickt. Mindesten 2 Prozesse Ausgewählt      
                  {true} -> spawn(fun() -> sendY(ProsList,2,Ggt_gewuenscht, Datei)end), 
-                          berechne(Datei);  
+                          berechne(State);  
                   
                  {false}-> spawn(fun() -> sendY(ProsList,Number_selected,Ggt_gewuenscht,Datei)end), 
-                          berechne(Datei)
+                          berechne(State)
                   
                 end
                 
@@ -125,9 +134,12 @@ start() ->
         end.
         
             
-    berechne(Datei)->                                                                               %% Hier wird auf die Werte der berechnung gewartet
+    berechne(State)->     
+    Datei= State#state.datei,                                                                          %% Hier wird auf die Werte der berechnung gewartet
     receive
-            {briefmi,{Clientname,CMi,CZeit}} -> werkzeug:logging(Datei,lists:concat(["ggt-Prozess ", Clientname, " meldet neues Mi ", CMi, " um", CZeit,"\n"])) , berechne(Datei)
+            {briefmi,{Clientname,CMi,CZeit}} -> werkzeug:logging(Datei,lists:concat(["ggt-Prozess ", Clientname, " meldet neues Mi ", CMi, " um ", CZeit,"\n"])) , berechne(State);
+            
+            {briefterm,{Clientname,CMi,CZeit}} -> werkzeug:logging(Datei,lists:concat(["ggt-Prozess ", Clientname, " meldet Terminierung mit Mi", CMi, " um ", CZeit,"\n"])) , init(State)
           end.   
         
     
